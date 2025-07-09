@@ -44,14 +44,14 @@ export const getCompanion = async (id: string) => {
     .select()
     .eq('id', id)
   
-    if (error) 
-      return console.log(error);
-    return data[0]
-    // .single()
-    // .then(({ data, error }) => {
-    //   if (error || !data) throw new Error(error?.message || 'Companion not found');
-    //   return data;
-    // });
+  if (error) 
+    return console.log(error);
+  return data[0]
+  // .single()
+  // .then(({ data, error }) => {
+  //   if (error || !data) throw new Error(error?.message || 'Companion not found');
+  //   return data;
+  // });
 }
 
 export const addToSessionHistory = async (companionId: string) => {
